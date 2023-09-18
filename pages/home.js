@@ -1,8 +1,8 @@
-'use client';
-import Image from 'next/image';
+// pages/home.js (Home)
 import Navbar from '../components/navBar/NavBar';
-import Footer from '../components/footer/footer';
 import View1 from '../components/view1';
+import Footer from '../components/footer/footer';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -10,6 +10,9 @@ export default function Home() {
       <Navbar />
       <View1 />
       <Footer />
+      <Link href="/">
+        Go to Landing
+      </Link>
     </div>
   );
 }

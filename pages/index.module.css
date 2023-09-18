@@ -1,0 +1,34 @@
+/* Landing.module.css */
+.container {
+    position: relative;
+  }
+  
+  .imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: relative;
+    z-index: 1; /* Coloca el contenido superpuesto sobre la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Cambia el fondo según tus preferencias */
+    min-height: 100%;
+    padding: 20px;
+  }
+  
