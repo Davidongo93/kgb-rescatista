@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [scrolling, setScrolling] = useState(false);
 
-  // Verificar si estamos en el lado del cliente antes de usar window
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const handleScroll = () => {
@@ -22,36 +22,23 @@ export default function Navbar() {
     }
   }, []);
 
-  // Verificar si estamos en un dispositivo móvil
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
-
   return (
     <nav
-      className={`fixed top-0 left-0 w-full p-4 ${
-        isMobile ? 'hidden' : ''
-      } bg-orange-500 backdrop-blur-lg transition-opacity duration-300 ${
-        scrolling ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'
+      className={`fixed top-0 left-0 w-full p-2 bg-orange-500 transition-opacity duration-300 ${
+        scrolling ? 'backdrop-blur-md bg-opacity-10' : 'opacity-100 bg-opacity-100'
       }`}
+      style={{ zIndex: 1000 }} // Añade esta línea para ajustar el z-index
     >
-      {isMobile && (
-        <div className="text-white text-2xl cursor-pointer">
+      <div className="flex justify-between items-center">
+        <div className="text-white text-2xl">
           &#9776;
         </div>
-      )}
-
-      {!isMobile && (
-        <div>
-          <a href="#view1" className="text-lg mx-4">
-            View 1
-          </a>
-          <a href="#view2" className="text-lg mx-4">
-            View 2
-          </a>
-          <a href="#view3" className="text-lg mx-4">
-            View 3
-          </a>
-        </div>
-      )}
+        <Link href="/about">
+          <button className="bg-transparent text-white text-lg p-2 rounded hover:bg-white hover:text-orange-500 transition ml-2">
+            About
+          </button>
+        </Link>
+      </div>
     </nav>
   );
 }

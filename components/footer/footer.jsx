@@ -1,4 +1,3 @@
-// components/Footer.js
 import { useState, useEffect } from 'react';
 
 export default function Footer() {
@@ -20,15 +19,26 @@ export default function Footer() {
     };
   }, []);
 
+  const footerStyle = {
+    opacity: scrolling ? '1' : '0',
+    transition: 'opacity 0.3s ease-in-out',
+    backdropFilter: scrolling ? 'blur(10px)' : 'none',
+    pointerEvents: scrolling ? 'auto' : 'none',
+  };
+
   return (
     <nav
-      className={`fixed bottom-0 left-0 w-full p-4 bg-black text-white transition-opacity duration-300 ${
-        scrolling ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'
-      }`}
+      className="fixed bottom-0 left-0 w-full p-2 bg-transparent text-white transition-opacity duration-300"
+      style={footerStyle}
     >
-      <footer className="text-center mb-10">
-        <a href="#" className="text-lg mx-4">
-          Sitio del Creador
+      <footer className="text-center">
+        <a
+          href="https://davidongo93.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg mx-2"
+        >
+          Developer website
         </a>
         <p>
           By{' '}
