@@ -6,14 +6,10 @@ export default function View1() {
     <div>
       <main className="relative min-h-screen mt-14"> {/* Agregar margen superior */}
         {/* Capa de fondo */}
-        <div className="absolute inset-0">
-          <Image
-            src="/landing.jpeg"
-            alt="Next.js Logo"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
+        <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full">
+          <source src="/flames.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
 
         {/* Capa de contenido */}
         <div className="relative z-0 flex flex-col justify-start items-center h-auto text-white">
