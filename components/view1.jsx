@@ -35,7 +35,7 @@ export default function View1() {
               {[...Array(5)].map((_, index) => (
                 <button
                   key={index}
-                  className="bg-gray-300 text-gray-600 px-4 py-2 rounded m-2"
+                  className="bg-orange-600 text-white px-4 py-2 rounded m-2 hover:bg-orange-700 transition inline-block mt-4"
                 >
                   Button {index + 1}
                 </button>
@@ -43,7 +43,7 @@ export default function View1() {
             </div>
 
             {/* Contenedor de párrafos */}
-            <div className="mt-8 flex flex-wrap justify-center">
+            <div className="mt-8 grid-wrap justify-center">
               {[...Array(15)].map((_, index) => (
                 <p key={index} className="text-gray-400 w-1/2 p-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.

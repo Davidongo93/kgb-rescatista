@@ -1,5 +1,6 @@
+'use client'
 import { useRouter } from 'next/router';
-
+import RootLayout from '../app/layout';
 export default function Landing() {
   const router = useRouter();
 
@@ -8,6 +9,7 @@ export default function Landing() {
   };
 
   return (
+    <RootLayout>
       <div className="min-h-screen relative overflow-hidden">
         {/* Video de fondo */}
         <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full">
@@ -29,5 +31,6 @@ export default function Landing() {
           </div>
         </div>
       </div>
+      </RootLayout>
   );
 }
