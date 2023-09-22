@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'; // Importa el componente Image de Next.js
+import Image from 'next/image';
 
 export default function View1() {
   return (
