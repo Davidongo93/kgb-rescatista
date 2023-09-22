@@ -9,7 +9,6 @@ export default function Home() {
     <RootLayout>
       <Navbar />
       <View1 />
-      <View1 />
       <Footer />
       </RootLayout>
   );

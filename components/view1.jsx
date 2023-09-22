@@ -1,22 +1,18 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image'; // Importa el componente Image de Next.js
 
 export default function View1() {
   return (
     <div>
-      <main className="relative min-h-screen mt-14"> {/* Agregar margen superior */}
+      <main className="relative min-h-screen mt-14">
         {/* Capa de fondo */}
-        <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full">
+        <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full" style={{ objectFit: 'cover', position: 'fixed' }}>
           <source src="/flames.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
 
         {/* Capa de contenido */}
         <div className="relative z-0 flex flex-col justify-start items-center h-auto text-white">
-          <div id="view1" className={`text-center mt-10 relative z-10`}>
-            <h1 className="text-4xl font-bold">Kevin Alexander Galeano Barbosa</h1>
-            <p>Bombero - Rescatista - Instructor</p>
-          </div>
 
           <section className="text-center mt-10 relative z-10">
             <p className="text-xl">
@@ -29,28 +25,21 @@ export default function View1() {
                 Back to Landing
               </button>
             </Link>
-
-            {/* Contenedor de botones */}
-            <div className="mt-8 flex flex-wrap justify-center">
-              {[...Array(5)].map((_, index) => (
-                <button
-                  key={index}
-                  className="bg-orange-600 text-white px-4 py-2 rounded m-2 hover:bg-orange-700 transition inline-block mt-4"
-                >
-                  Button {index + 1}
-                </button>
-              ))}
-            </div>
-
-            {/* Contenedor de párrafos */}
-            <div className="mt-8 grid-wrap justify-center">
-              {[...Array(15)].map((_, index) => (
-                <p key={index} className="text-gray-400 w-1/2 p-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              ))}
-            </div>
           </section>
+          {/* Contenido adicional en el lado derecho */}
+          <div className="flex justify-end items-center mt-4">
+            <div className="text-white text-left mr-8">
+              <Image src="/chopper.jpeg" alt="Bombero" width={200} height={200} /> {/* Agrega la imagen */}
+            </div>
+            <div className="text-white">
+              <h2 className="text-2xl font-bold mb-2">Más de diez años salvando vidas</h2>
+              <p className="text-sm">
+                Como bombero, he estado involucrado en diversas actividades de rescate y prevención de incendios.
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </main>
     </div>
