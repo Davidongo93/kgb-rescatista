@@ -1,5 +1,6 @@
 "use client"
 import { useRouter } from 'next/router';
+import Social from '@/components/social/Social';
 export default function Landing() {
   const router = useRouter();
 
@@ -28,6 +29,7 @@ export default function Landing() {
             </button>
           </div>
         </div>
+          <Social/>
       </div>
   );
 }

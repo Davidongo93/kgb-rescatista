@@ -1,0 +1,27 @@
+/* Estilos para el componente Social */
+.socialContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .customIconLink {
+    color: orange; /* Cambia el color de los íconos a naranja */
+    text-shadow: 1px 1px 3px black; /* Añade una sombra negra a los íconos */
+    transition: text-shadow 0.3s ease, color 0.3s ease; /* Agrega una transición para la sombra y el color */
+    margin: 0 3px;   
+}
+  
+  .customIconLink:hover {
+    color: white; /* Cambia el color de los íconos a blanco en hover */
+    text-shadow: 2px 2px 5px black; /* Aumenta la sombra negra en hover */
+  }
+  
+  .customIcon {
+    font-size: 24px; /* Cambia el tamaño de los íconos */
+  }
+  
