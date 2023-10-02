@@ -1,6 +1,6 @@
 "use client"
+import Social from '@/components/social/Social.jsx';
 import { useRouter } from 'next/router';
-import Social from '@/components/social/Social';
 export default function Landing() {
   const router = useRouter();
 
