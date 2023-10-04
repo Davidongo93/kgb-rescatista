@@ -1,14 +1,7 @@
-import Social from '../app/components/social/Social';
-import RootLayout from './layout';
+import Social from '@/app/components/social/Social.jsx';
 export default function Landing() {
-
-  const goToHome = () => {
-    console.log("/home");
-    router.push('/home');
-  };
-
+  
   return (
-    <RootLayout>
       <div className="min-h-screen relative overflow-hidden">
         {/* Video de fondo */}
         <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full">
@@ -22,16 +15,16 @@ export default function Landing() {
             <div className="text-3xl font-bold">Kevin Alexander Galeano Barbosa</div>
             <div className="text-xl">Bombero - Rescatista - Instructor</div>
             <button
-            // onClick={()=>{goToHome}}
               className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition mt-4 text-center"
             >
-              <code className="text-white-400">Explore</code>
-              <a href="/home">boton a</a>
+              <code className="text-white-400">
+              <a
+              href="/home"
+              >Explore</a></code>
             </button>
           </div>
         </div>
-            <Social />
+        <Social/>
       </div>
-      </RootLayout>
   );
 }

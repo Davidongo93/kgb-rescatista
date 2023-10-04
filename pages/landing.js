@@ -1,5 +1,5 @@
-// import Social from '@/components/social/Social.jsx';
-import { useRouter } from 'next/router';
+import Social from '@/app/components/social/Social.jsx';
+import { useRouter } from 'next/navigation';
 export default function Landing() {
   const router = useRouter();
 
@@ -28,6 +28,7 @@ export default function Landing() {
             </button>
           </div>
         </div>
+            <Social />
       </div>
   );
 }

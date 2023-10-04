@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import Social from '@/components/social/Social';
+import Social from '@/app/components/social/Social.jsx';
 import Image from 'next/image';
 import '@fortawesome/fontawesome-free/css/all.css'; // Importa todas las fuentes
 

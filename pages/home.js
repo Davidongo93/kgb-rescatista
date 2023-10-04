@@ -1,6 +1,6 @@
-import Navbar from '../components/navBar/NavBar';
-import View1 from '../components/view1';
-import Footer from '../components/footer/Footer.jsx';
+import Navbar from '../app/components/navBar/NavBar';
+import View1 from '../app/components/view1';
+import Footer from '../app/components/footer/Footer.jsx';
 
 export default function Home() {
   return (
