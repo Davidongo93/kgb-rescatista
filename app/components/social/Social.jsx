@@ -1,3 +1,4 @@
+"use client"
 import styles from './Social.module.css';
 
 const Social = () => {
