@@ -1,8 +1,6 @@
  "use client"
-// import { Router } from "next/router";
 export default function Landing() {
-  // const router = Router;
-  // console.log(router.pathname);
+
 return (
       <div className="min-h-screen relative overflow-hidden">
         {/* Video de fondo */}

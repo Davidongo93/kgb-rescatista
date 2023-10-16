@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from "next/router";
 import './globals.css'
 import { Inter } from 'next/font/google';
 import Footer from './components/footer/Footer';
@@ -12,8 +11,6 @@ const inter = Inter({ subsets: ['latin'] });
 // };
 
 export default function RootLayout({ children }) {
-  const router = useRouter(); // Utiliza la función useRouter() para obtener el objeto Router.
-  console.log(router.pathname);
   return (
   <>
       <Landing />
