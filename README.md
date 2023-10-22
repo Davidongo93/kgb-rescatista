@@ -46,4 +46,4 @@ The project aims to create a well-structured and filtered archive, offering easy
 
 🔥 **Kevin Alexander Galeano's Personal Branding Page** | [Visit the Website](https://kgb-rescatista.vercel.app/)
 
-Thank you for supporting Kevin's mission! 🚒💪
+Thank you for supporting Kevin's mission! 🚒💪 🥑:V
