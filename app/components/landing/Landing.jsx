@@ -1,10 +1,12 @@
-import Link from 'next/link';
 import Social from '../social/Social';
 import { useRouter } from 'next/navigation';
 
 export default function Landing() {
   const router = useRouter();
 
+  const goToHome = () => {
+    router.push('/home');
+  };
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -19,11 +21,12 @@ export default function Landing() {
         <div className="text-white text-center">
           <div className="text-3xl font-bold">Kevin Alexander Galeano Barbosa</div>
           <div className="text-xl">Bombero - Rescatista - Instructor</div>
-          <Link href="/home">
-            <a className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition mt-4 text-center">
-              <code className="text-white-400">Explore</code>
-            </a>
-          </Link>
+          <button
+            onClick={goToHome}
+            className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition mt-4 text-center"
+          >
+            <code className="text-white-400">Explore</code>
+          </button>
         </div>
       </div>
       <Social />
