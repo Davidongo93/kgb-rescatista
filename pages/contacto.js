@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
-import Social from '@/app/components/social/Social.jsx';
+import Social from '../app/components/social/Social';
 import Image from 'next/image';
-import '@fortawesome/fontawesome-free/css/all.css'; // Importa todas las fuentes
+import '@fortawesome/fontawesome-free/css/all.css'; 
 
 const Contacto = () => {
   return (
