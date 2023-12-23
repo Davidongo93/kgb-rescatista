@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 //   description: 'Firefighter - Trainer - Rescuer',
 // };
 
-export default function RootLayout({ children }) {
+export default function RootLayout() {
   return (
   <>
       <Landing />
