@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ['latin'] });
 //   description: 'Firefighter - Trainer - Rescuer',
 // };
 
-export default function RootLayout() {
+export default function RootLayout({ children }) {
   return (
   <>
       <Landing />
-      {/* { children } */}
+      { children }
     <Footer />
     </>
   );

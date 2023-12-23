@@ -23,10 +23,10 @@ export default function Landing() {
           <div className="text-3xl font-bold">Kevin Alexander Galeano Barbosa</div>
           <div className="text-xl">Bombero - Rescatista - Instructor</div>
           <Link href="/home">
-            <a className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition mt-4 text-center">
-              <code className="text-white-400">Explore</code>
-            </a>
-          </Link>
+  <div className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition mt-4 text-center">
+    <code className="text-white-400">Explore</code>
+  </div>
+</Link>
         </div>
       </div>
       <Social />

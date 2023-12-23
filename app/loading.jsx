@@ -8,7 +8,7 @@ const LoadingPage = () => {
   return (
     <div className="loading-page">
       <div className="loading-container">
-<p>holi neas gononeas</p>
+<p>Componente visible cuando el contenido No puede ser cargado.</p>
       </div>
     </div>
   );
