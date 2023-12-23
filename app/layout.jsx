@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
   <>
       <Landing />
-      { children }
+      {/* { children } */}
     <Footer />
     </>
   );
