@@ -8,8 +8,9 @@ export default function Page() {
 
   return (
 <>
-<Landing/>
-{/* <RootLayout /> */}
+<RootLayout>
+  <Landing/>
+</RootLayout>
 </>
 
   );
