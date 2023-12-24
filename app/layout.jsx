@@ -1,19 +1,16 @@
-"use client"
-import './globals.css'
-import { Inter } from 'next/font/google';
-import Footer from './components/footer/Footer';
-import Landing from './components/landing/Landing';
+// RootLayout.js
 
-const inter = Inter({ subsets: ['latin'] });
-// export const metadata = {
-//   title: 'Kevin Galeano - Rescatista',
-//   description: 'Firefighter - Trainer - Rescuer',
-// };
+import { useRouter } from "next/navigation";
+import ChildComponent from "./ChildComponent";
 
 export default function RootLayout({ children }) {
+  const router = useRouter();
+
   return (
-  <>
-      { children }
+    <>
+      {/* Pasa el router como prop al componente hijo */}
+      <ChildComponent router={router} />
+      {children}
     </>
   );
 }
