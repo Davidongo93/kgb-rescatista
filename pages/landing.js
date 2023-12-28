@@ -20,7 +20,7 @@ export default function Landing() {
       {/* Contenedor del contenido superpuesto */}
       <div className="absolute top-8 right-8 bg-white bg-opacity-80 p-4 rounded-lg">
         <div className="text-white text-center">
-          <div className="text-3xl font-bold">Kevin Alexander Galeano Barbosa</div>
+          <div className="text-3xl font-bold">Kevin Alexander Galeano Barbosa \n views non jsx</div>
           <div className="text-xl">Bombero - Rescatista - Instructor</div>
           <Link href="/home">
   <div className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition mt-4 text-center">

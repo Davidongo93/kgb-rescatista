@@ -1,3 +1,5 @@
+"use client"
+import Footer from '../footer/Footer';
 import Social from '../social/Social';
 import { useRouter } from 'next/navigation';
 
@@ -7,8 +9,8 @@ export default function Landing() {
   const goToHome = () => {
     router.push('/home');
   };
-
   return (
+<>
     <div className="min-h-screen relative overflow-hidden">
       {/* Video de fondo */}
       <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full">
@@ -29,7 +31,9 @@ export default function Landing() {
           </button>
         </div>
       </div>
-      <Social />
     </div>
+      <Social />
+      <Footer />
+      </>
   );
 }
