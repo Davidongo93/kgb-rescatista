@@ -1,14 +1,10 @@
+import  ErrorBoundary  from 'next/dist/client/components/error-boundary';
 import './globals.css'
 
-import { Metadata } from 'next'
- 
-export const metadata = Metadata = {
-  title: 'Next.js',
-}
 export default function RootLayout({ children }) {
   return (
-  <>
-  { children }
-    </>
+    <html lang="en">
+    <body>{children}</body>
+  </html>
   );
 }
