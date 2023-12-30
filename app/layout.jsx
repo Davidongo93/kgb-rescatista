@@ -3,6 +3,7 @@ import { usePathname } from 'next/navigation';
 import './globals.css'
 import Navbar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
+import Social from './components/social/Social';
 
 export default function RootLayout({ children }) {
   const path = usePathname();
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
       <body>
     {path !== '/' && <Navbar/>}
     {children}
+    <Social/>
     {path !== '/' && <Footer/>}
     </body>
   </html>

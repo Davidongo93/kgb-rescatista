@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Social from './components/social/Social';
 
 export default function Page() {
   const pathname = usePathname();
@@ -29,7 +28,6 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <Social/>
         </div>
           </>
       );

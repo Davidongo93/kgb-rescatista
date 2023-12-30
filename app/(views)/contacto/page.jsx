@@ -1,8 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
-import Social from '../../components/social/Social';
 import Image from 'next/image';
-import '@fortawesome/fontawesome-free/css/all.css'; 
 
 const Contacto = () => {
   return (
@@ -22,7 +19,6 @@ const Contacto = () => {
             width={400}
             height={300}
           />
-          <Social/>
         </div>
       </div>
     </>
