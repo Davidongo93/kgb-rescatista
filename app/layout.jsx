@@ -8,9 +8,11 @@ export default function RootLayout({ children }) {
   const path = usePathname();
   return (
     <html lang="en">
-      {path !== '/' && <Navbar/>}
-    <body>{children}</body>
+      <body>
+    {path !== '/' && <Navbar/>}
+    {children}
     {path !== '/' && <Footer/>}
+    </body>
   </html>
   );
 }

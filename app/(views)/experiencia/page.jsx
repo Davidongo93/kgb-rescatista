@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import RootLayout from '../app/layout';
 
 const Experiencia = () => {
   return (
-    <RootLayout>
+    <>
       <div className="min-h-screen flex flex-col justify-center items-center">
         <h1 className="text-3xl font-bold mb-4">Experiencia</h1>
         <p className="text-lg">Aquí puedes agregar contenido relacionado con tu experiencia.</p>
@@ -25,7 +24,7 @@ const Experiencia = () => {
           />
         </div>
       </div>
-    </RootLayout>
+      </>
   );
 };
 

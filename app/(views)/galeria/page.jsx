@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image'; // Importa el componente Image de Next.js
-import RootLayout from '../app/layout';
+import RootLayout from '../../layout';
 
 const Galeria = () => {
   return (
-    <RootLayout>
+    <>
       <div className="min-h-screen flex flex-col justify-center items-center">
         <h1 className="text-3xl font-bold mb-4">Galería</h1>
         <div className="text-lg text-center mb-4"> {/* Centro el texto */}
@@ -32,7 +32,7 @@ const Galeria = () => {
           </div>
         </div>
       </div>
-    </RootLayout>
+    </>
   );
 };
 

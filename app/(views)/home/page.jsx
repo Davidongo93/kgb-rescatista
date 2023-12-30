@@ -7,7 +7,6 @@ export default function Home() {
   useEffect(() => {
     console.log('Componente Home montado');
   }, []);
-  console.log("Home view");
   return (
     <div>
       <main className="relative min-h-screen mt-14">
