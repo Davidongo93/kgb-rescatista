@@ -1,11 +1,8 @@
-import Loading from './loading.jsx'
-import Landing from './components/landing/Landing.jsx';
+import Landing from './(views)/landing/Landing';
 
 export default function Page() {
   return (
     <> 
- {/* {loading ? <Loading /> : null} */}
-     
         <Landing />
     </>
   );

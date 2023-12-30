@@ -1,7 +1,13 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
-export default function View1() {
+export default function Home() {
+  useEffect(() => {
+    console.log('Componente Home montado');
+  }, []);
+  console.log("Home view");
   return (
     <div>
       <main className="relative min-h-screen mt-14">
