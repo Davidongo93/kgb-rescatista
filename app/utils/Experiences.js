@@ -10,7 +10,7 @@ const experiences = [
       endDate: "2015",
     },
     {
-        imageSrc: "/landing.jpeg",
+        imageSrc: "/monteluna.jpg",
       alt: "Cruz Roja Colombiana",
       title: "Cruz Roja Colombiana",
       description: `
@@ -20,7 +20,7 @@ const experiences = [
       endDate: "2015",
     },
     {
-        imageSrc: "/landing.jpeg",
+        imageSrc: "/chopper.jpg",
       alt: "Bomberos Colombia",
       title: "Bomberos Colombia",
       description: `
@@ -30,7 +30,7 @@ const experiences = [
       endDate: "2015",
     },
     {
-        imageSrc: "/landing.jpeg",
+        imageSrc: "/cable.jpeg",
       alt: "W.J. Rescate",
       title: "W.J. Rescate",
       description: `

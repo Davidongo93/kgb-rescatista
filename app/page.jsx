@@ -15,8 +15,7 @@ export default function Page() {
         <Image
           src="/landing.jpeg"  // Reemplaza con la ruta de tu imagen de respaldo
           alt="Fallback Image"
-          className="absolute inset-0 object-cover w-full h-full hidden"  // Agrega la clase 'hidden'
-        />
+          className="absolute inset-0 object-cover w-full h-full hidden"        />
 
         {/* Contenedor del contenido superpuesto */}
         <div className="absolute top-8 right-8 ml-8 bg-white bg-opacity-80 p-4 rounded-lg">
