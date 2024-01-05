@@ -1,4 +1,5 @@
-import Image from 'next/image';
+"use client"
+import { CldImage } from 'next-cloudinary';
 import Link from 'next/link';
 
 export default function Page() {
@@ -6,16 +7,25 @@ export default function Page() {
     <>
       <div className="min-h-screen relative overflow-hidden">
         {/* Video de fondo */}
-        <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full">
-          <source src="/landanim.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
-        </video>
+        <CldImage
+          cloudname={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+          publicid="c3nfuqyxau6tvnezmxx5"
+          width="1920"
+          height="1080"
+          crop="fill"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
 
         {/* Imagen de respaldo si el video no puede ser reproducido */}
-        <Image
-          src="/landing.jpeg"  // Reemplaza con la ruta de tu imagen de respaldo
+        <CldImage
+          cloudname={process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}
+          publicid="lcltkvub9xm9wsnw01sf"
+          width="1920"
+          height="1080"
+          crop="fill"
+          className="absolute inset-0 object-cover w-full h-full hidden"
           alt="Fallback Image"
-          className="absolute inset-0 object-cover w-full h-full hidden"        />
+        />
 
         {/* Contenedor del contenido superpuesto */}
         <div className="absolute top-8 right-8 ml-8 bg-white bg-opacity-80 p-4 rounded-lg">
