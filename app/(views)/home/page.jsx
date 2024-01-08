@@ -14,7 +14,7 @@ export default function Home() {
           className="absolute inset-0 object-cover w-full h-full"
           style={{ objectFit: "cover", position: "fixed" }}
         >
-          <source src="/flames.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/de43jseoy/video/upload/v1704412192/xbtekdxt32y4xknarqiv.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
 
