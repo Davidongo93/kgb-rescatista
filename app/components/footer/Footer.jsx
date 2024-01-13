@@ -1,17 +1,14 @@
-"use client"
+// Footer.js
 import { useState, useEffect } from 'react';
-import styles from './Footer.module.css'; // Importa el archivo CSS module
+import styles from './Footer.module.css';
 
 export default function Footer() {
-  const [scrolling, setScrolling] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      setShowFooter(isAtBottom);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -27,9 +24,9 @@ export default function Footer() {
 
   return (
     <nav
-      className={`${styles.footer} ${scrolling ? styles['opacity-1'] : styles['opacity-0']} ${
-        scrolling ? styles['blur-10px'] : ''
-      } ${scrolling ? styles['pointer-events-auto'] : ''}`}
+      className={`${styles.footer} ${showFooter ? styles['opacity-1'] : styles['opacity-0']} ${
+        showFooter ? styles['blur-10px'] : ''
+      } ${showFooter ? styles['pointer-events-auto'] : ''}`}
     >
       <footer className="text-center">
         <p>
