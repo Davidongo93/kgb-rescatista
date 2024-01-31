@@ -10,7 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-    {path !== '/' && <Navbar/>}
+        <Navbar/>
+    {/* {path !== '/' && <Navbar/>} */}
     {children}
     {path !== '/home' && <Social/>}
     

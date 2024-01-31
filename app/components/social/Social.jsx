@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 const Social = () => {
   return (
-    <div className="socialContainer">
+    <div className="socialContainer fixed">
       <a
         href="https://www.instagram.com/judasgaleano/?hl=es"
         target="_blank"

@@ -4,13 +4,24 @@ import Image from 'next/image';
 const Contacto = () => {
   return (
     <>
+    
       <div
-        className="min-h-screen flex flex-col justify-center items-center"
-        style={{
-          background: `url("/three.jpg") center/cover fixed no-repeat`,
-        }}
+        className="h-screen flex flex-col justify-center items-center"
       >
-        <div className="bg-white bg-opacity-80 p-6 rounded-lg shadow-md text-center text-gray-800">
+        <div className="fixed">
+  {/* Contenido de tu componente */}
+  <Image
+    src="/three.jpg"
+    alt="Imagen de fondo"
+    width={1920}
+    height={1080}
+    objectFit="cover"
+    quality={100}
+  />
+</div>
+
+        
+        <div className="bg-white bg-opacity-80 p-6 rounded-lg shadow-md text-center text-gray-800 fixed">
           <h1 className="text-3xl font-bold mb-4">Contacto</h1>
           <div className="flex flex-col items-left mb-4">
             <div className="flex items-center mb-2">
