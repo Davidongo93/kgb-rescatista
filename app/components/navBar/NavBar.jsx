@@ -37,7 +37,7 @@ const Navbar = () => {
       style={{ zIndex: 1000 }}
     >
       <div className="flex justify-center items-center">
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-8 text-white ">
          <Link href="/">
             <FontAwesomeIcon icon={faHome} className="w-8 h-8 text-2xl transition duration-300 transform hover:scale-110" />
         </Link>
