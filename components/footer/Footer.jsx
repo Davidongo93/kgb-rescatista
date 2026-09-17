@@ -7,14 +7,18 @@ export default function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      const isAtBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
       setShowFooter(isAtBottom);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // páginas cortas: ya están al fondo al montar
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
   }, []);
 
@@ -35,7 +39,7 @@ export default function Footer() {
             href="https://daev.space/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 font-semibold"
+            className={styles.link}
           >
             DÆV
           </a>

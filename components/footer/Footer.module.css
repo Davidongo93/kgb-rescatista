@@ -1,28 +1,91 @@
-/* Footer.module.css */
+/* ============================================================================
+ *  Firma personal de DÆV — estilos canónicos
+ * ============================================================================
+ *  Misma firma en todos los proyectos de Dave. EL GRADIENTE NO SE TEMATIZA:
+ *    #60A5FA  azul histórico de esta firma
+ *    #00E5FF  cian del logo del navbar de daev.space (--accent del tema oscuro)
+ *    #5FD0C6  aqua de la firma en chezboaztours
+ *  Nunca sustituirlos por colores del proyecto.
+ * ========================================================================== */
+
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    background-color: transparent;
-    color: white;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 20;
-  }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Mitad de alto que la versión anterior (era 1rem). */
+  padding: .3rem 1rem;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.35;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 20;
+}
 
-  .opacity-1 {
-    opacity: 1;
-  }
+.opacity-1 { opacity: 1; }
+.opacity-0 { opacity: 0; }
+.blur-10px { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.pointer-events-auto { pointer-events: auto; }
 
-  .opacity-0 {
-    opacity: 0;
-  }
+.link {
+  /* Color de respaldo para quien no soporte background-clip: text */
+  color: #00E5FF;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 .1em;
+  /* Simétrico a propósito: el bucle cierra sin salto. Con el recorte al 200%
+     el texto muestra siempre los tres azules a la vez. */
+  background-image: linear-gradient(
+    100deg,
+    #60A5FA 0%,
+    #00E5FF 25%,
+    #5FD0C6 50%,
+    #00E5FF 75%,
+    #60A5FA 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    daev-flow 6s linear infinite,
+    daev-pulse 2.6s ease-in-out infinite;
+  transition: text-shadow .2s ease, transform .2s ease;
+}
 
-  .blur-10px {
-    backdrop-filter: blur(10px);
-  }
+/* El gradiente se desplaza: los tres azules pasan por el texto. */
+@keyframes daev-flow {
+  from { background-position:   0% 50%; }
+  to   { background-position: 100% 50%; }
+}
 
-  .pointer-events-auto {
-    pointer-events: auto;
-  }
+/* Latido sutil: invita al clic sin gritar. */
+@keyframes daev-pulse {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(0, 229, 255, 0)); }
+  50%      { filter: drop-shadow(0 0 6px rgba(0, 229, 255, .55)); }
+}
+
+/* Al pasar el cursor: el barrido se acelera, el latido se va y el brillo lo da
+   `text-shadow`. No se usa `filter` acá porque la animación lo pisa: una
+   animación gana sobre una declaración normal, incluso pausada. */
+.link:hover,
+.link:focus-visible {
+  animation: daev-flow 2.5s linear infinite;
+  text-shadow: 0 0 10px rgba(0, 229, 255, .75);
+  transform: translateY(-1px);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #00E5FF;
+}
+.link:focus-visible { outline: 2px solid #00E5FF; outline-offset: 3px; border-radius: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .link:hover,
+  .link:focus-visible { animation: none; transform: none; }
+}
